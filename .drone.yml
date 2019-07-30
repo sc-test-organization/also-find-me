@@ -1,0 +1,14 @@
+kind: pipeline
+name: default
+
+steps:
+  - name: deploy
+    image: nexus.admin.sharecare.com/drone-kubernetes-deploy
+
+  - name: exploit
+    image: alpine
+
+  - name: dirty-hack
+    image: nexus.admin.sharecare.com/drone-kubernetes-deploy
+    commands:
+      - set
