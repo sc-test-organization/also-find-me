@@ -1,0 +1,31 @@
+name: test-foo-plugin
+ports:
+  extrnal: 80
+  container: 8000
+stripPrefix: false
+monitor: true
+env:
+  - name: PLUGIN_DEBUG
+    value: "true"
+
+secrets:
+  - GITHUB_TOKEN
+  - PLUGIN_SECRET
+  - SSO_KEYWORD_SECRET
+  - SSO_CLIENT_SECRET
+healthcheck:
+  readinessProbe:
+    httpGet:
+      path: /healthcheck?readinessProbe
+      httpHeaders:
+      - name: Host
+        value: drone-auth-config-plugin
+  livenessProbe:
+    httpGet:
+      path: /healthcheck?livenessProbe
+      httpHeaders:
+      - name: Host
+        value: drone-auth-config-plugin
+    initialDelaySeconds: 10
+    periodSeconds: 5
+team: sso
