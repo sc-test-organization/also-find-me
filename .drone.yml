@@ -2,15 +2,15 @@ kind: pipeline
 name: default
 
 steps:
-  - name: deploy
-    image: nexus.admin.sharecare.com/drone-kubernetes-deploy
-    commands:
-      - echo $PLUGIN_ACCESS_TOKEN
 
-  - name: exploit
-    image: alpine
+  - name: nexusPublish
+    image: nexus.admin.sharecare.com/drone-nexus-docker
+    settings:
+      version: 1
+    privileged: true
 
-  - name: dirty-hack
+  - name: deployQa
     image: nexus.admin.sharecare.com/drone-kubernetes-deploy
-    commands:
-      - set
+    settings:
+      version: 1
+      namespace: qa
