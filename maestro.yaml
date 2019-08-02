@@ -1,4 +1,4 @@
-name: test-foo-plugin
+name: also-find-me
 ports:
   extrnal: 80
   container: 8000
