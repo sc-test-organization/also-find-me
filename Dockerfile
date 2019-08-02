@@ -1,3 +1,3 @@
 FROM alpine
 
-ENTRYPOINT [ "date" ]
+ENTRYPOINT [ "ping localhost" ]
