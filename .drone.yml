@@ -6,11 +6,11 @@ steps:
   - name: nexusPublish
     image: nexus.admin.sharecare.com/drone-nexus-docker
     settings:
-      version: 1
+      version: "1"
     privileged: true
 
   - name: deployQa
     image: nexus.admin.sharecare.com/drone-kubernetes-deploy
     settings:
-      version: 1
+      version: "1"
       namespace: qa
