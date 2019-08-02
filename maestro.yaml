@@ -1,4 +1,4 @@
-name: also-find-me
+name: diandronetest
 ports:
   extrnal: 80
   container: 8000
