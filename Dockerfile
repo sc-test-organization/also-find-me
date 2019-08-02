@@ -1,0 +1,3 @@
+FORM alpine
+
+ENTRYPOINT [ "date" ]
