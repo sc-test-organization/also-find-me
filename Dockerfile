@@ -1,3 +1,3 @@
-FORM alpine
+FROM alpine
 
 ENTRYPOINT [ "date" ]
