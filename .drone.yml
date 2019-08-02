@@ -12,5 +12,5 @@ steps:
   - name: deployQa
     image: nexus.admin.sharecare.com/drone-kubernetes-deploy
     settings:
-      version: "1"
+      version: cat ./version
       namespace: qa
