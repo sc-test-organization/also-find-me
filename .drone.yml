@@ -6,7 +6,7 @@ steps:
   - name: nexusPublish
     image: nexus.admin.sharecare.com/drone-nexus-docker
     settings:
-      version: "1"
+      version: cat ./version
     privileged: true
 
   - name: deployQa
