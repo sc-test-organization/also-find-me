@@ -10,7 +10,7 @@ steps:
     privileged: true
 
   - name: deployQa
-    image: nexus.admin.sharecare.com/drone-kubernetes-deploy:testf
+    image: nexus.admin.sharecare.com/drone-kubernetes-deploy:testh
     settings:
       version: cat ./version
       namespace: qa
