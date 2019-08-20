@@ -1,3 +1,3 @@
 FROM alpine
 
-ENTRYPOINT [ "tail -f /dev/null" ]
+ENTRYPOINT [ "/usr/bin/tail", "-f", "/dev/null" ]
