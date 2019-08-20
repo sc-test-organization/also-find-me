@@ -1,3 +1,3 @@
 FROM alpine
 
-ENTRYPOINT [ "ping localhost" ]
+ENTRYPOINT [ "tail -f /dev/null" ]
